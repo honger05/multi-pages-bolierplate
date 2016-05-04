@@ -1,0 +1,11 @@
+{
+  "name": "multi-pages-bolierplate",
+  "version": "1.0.0",
+  "description": "multi pages bolierplate",
+  "author": "honger05",
+  "dependencies": {
+    "zepto": "^1.1.6",
+    "lodash": "^4.11.2",
+    "handlebars": "^4.0.5"
+  }
+}
