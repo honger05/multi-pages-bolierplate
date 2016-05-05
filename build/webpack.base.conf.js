@@ -6,6 +6,7 @@ var bowerRoot = path.resolve(__dirname, '../src/bower_components/')
 
 module.exports = {
   entry: {
+    // zepto, lodash exposed by itself
     common: ['zepto', 'lodash', 'handlebars', 'utils']
   },
   output: {
@@ -54,14 +55,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: path.join(bowerRoot, 'zepto/zepto'),
-        loader: 'expose?$'
-      },
-      {
-        test: path.join(bowerRoot, 'lodash/lodash'),
-        loader: 'expose?_'
       },
       {
         test: path.join(bowerRoot, 'handlebars/handlebars'),
