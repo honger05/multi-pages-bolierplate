@@ -2,5 +2,5 @@
 require('../scss/app.scss')
 
 module.exports = {
-  log: require('./core/_log')
+  LOG: require('./core/_log')
 }
