@@ -1,0 +1,132 @@
+{
+  "name": "vux",
+  "version": "0.0.116",
+  "description": "Mobile web UI based on Vue and Weui",
+  "keywords": [
+    "vux",
+    "vue",
+    "weui",
+    "weex",
+    "vue-components",
+    "web-components",
+    "component",
+    "components",
+    "mobile ui",
+    "framework",
+    "frontend"
+  ],
+  "author": {
+    "name": "airyland",
+    "email": "airyland@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airyland/vux.git"
+  },
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build": "rimraf dist && webpack --progress --hide-modules --colors --config build/webpack.prod.conf.js && cd dist/static && mkdir vendors && cd ../../ && cp -r src/assets/* dist/static/ && cp CNAME dist/ && cp favicon.ico dist/",
+    "test": "karma start build/karma.conf.js --single-run",
+    "deploy": "gh-pages -d dist",
+    "xdeploy": "npm run build && gh-pages -d dist",
+    "xbuild": "webpack --progress --hide-modules --colors --config build/webpack.npm.conf.js && rimraf components && node build/build-components",
+    "xpublish": "npm run xbuild && npm publish && npm run xdeploy"
+  },
+  "main": "vux.js",
+  "dependencies": {
+    "blazy": "^1.5.2",
+    "countup": "^1.6.1",
+    "eslint": "^2.5.1",
+    "lodash.filter": "^4.2.1",
+    "lodash.find": "^4.2.0",
+    "lodash.indexof": "^4.0.1",
+    "lodash.map": "^4.2.1",
+    "lodash.shuffle": "^4.0.0",
+    "shake.js": "^1.2.2",
+    "validator": "^5.1.0",
+    "vux-xscroll": "^3.1.4",
+    "webp-support": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-runtime": "^5.8.35",
+    "china-area-data": "^1.0.0",
+    "cli-spinner": "^0.2.4",
+    "co": "^4.6.0",
+    "co-fs": "^1.2.0",
+    "co-request": "^1.0.0",
+    "connect-history-api-fallback": "^1.1.0",
+    "copy-webpack-plugin": "^1.1.1",
+    "css-loader": "^0.23.0",
+    "eslint-config-standard": "^5.1.0",
+    "eslint-friendly-formatter": "^1.2.2",
+    "eslint-loader": "^1.2.0",
+    "eslint-plugin-html": "^1.4.0",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fastclick": "^1.0.6",
+    "file-loader": "^0.8.4",
+    "function-bind": "^1.0.2",
+    "gh-pages": "^0.10.0",
+    "html-webpack-plugin": "^2.14.0",
+    "inject-loader": "^2.0.1",
+    "jasmine-core": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "^0.13.15",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-spec-reporter": "0.0.24",
+    "karma-webpack": "^1.7.0",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.2",
+    "rimraf": "^2.5.0",
+    "url-loader": "^0.5.7",
+    "vue": "^1.0.17",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.2.0",
+    "vue-loader": "^8.0.0",
+    "vue-router": "^0.7.11",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
+  },
+  "gitHead": "45702fa765ea094da1bdf539ec9f550427c39b8b",
+  "bugs": {
+    "url": "https://github.com/airyland/vux/issues"
+  },
+  "homepage": "https://github.com/airyland/vux#readme",
+  "_id": "vux@0.0.116",
+  "_shasum": "8b8ead69c9abbe61189e017e80a380aa9c0e5f83",
+  "_from": "vux@latest",
+  "_npmVersion": "3.6.0",
+  "_nodeVersion": "5.5.0",
+  "_npmUser": {
+    "name": "airyland",
+    "email": "airyland@qq.com"
+  },
+  "maintainers": [
+    {
+      "name": "airyland",
+      "email": "airyland@qq.com"
+    }
+  ],
+  "dist": {
+    "shasum": "8b8ead69c9abbe61189e017e80a380aa9c0e5f83",
+    "tarball": "https://registry.npmjs.org/vux/-/vux-0.0.116.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/vux-0.0.116.tgz_1462548773547_0.2890670911874622"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/vux/-/vux-0.0.116.tgz",
+  "readme": "ERROR: No README data found!"
+}

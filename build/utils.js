@@ -27,9 +27,9 @@ exports.cssLoaders = function (options) {
     }).join('!')
 
     if (options.extract) {
-      return ExtractTextPlugin.extract(sourceLoader)
+      return ExtractTextPlugin.extract('vue-style-loader', sourceLoader)
     } else {
-      return ['style-loader'].concat(sourceLoader).join('!')
+      return ['style-loader', 'vue-style-loader', sourceLoader].join('!')
     }
   }
 

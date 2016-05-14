@@ -1,0 +1,15 @@
+{
+  "name": "vue-validator",
+  "homepage": "https://github.com/vuejs/vue-validator",
+  "version": "2.1.1",
+  "_release": "2.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.1",
+    "commit": "d2ad88e41416a0a9f4c43c19967ffebe43a8ded7"
+  },
+  "_source": "https://github.com/vuejs/vue-validator.git",
+  "_target": "^2.1.1",
+  "_originalSource": "vue-validator",
+  "_direct": true
+}
