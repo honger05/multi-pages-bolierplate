@@ -27,11 +27,11 @@ var conf = {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
     new webpack.optimize.CommonsChunkPlugin({
       name: "common",
       filename: utils.assetsPath('js/common.js'),
@@ -52,13 +52,13 @@ utils.entry.forEach(function(item) {
     template: 'src/tmpl/' + item + '.html',
     inject: 'body',
     chunks: [ item ],
-    minify: {
-      removeComments: true,
-      collapseWhitespace: true,
-      removeAttributeQuotes: true
-      // more options:
-      // https://github.com/kangax/html-minifier#options-quick-reference
-    }
+    // minify: {
+    //   removeComments: true,
+    //   collapseWhitespace: true,
+    //   removeAttributeQuotes: true
+    //   // more options:
+    //   // https://github.com/kangax/html-minifier#options-quick-reference
+    // }
   }))
 })
 

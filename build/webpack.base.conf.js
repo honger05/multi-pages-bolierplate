@@ -7,7 +7,7 @@ var bowerRoot = path.resolve(__dirname, '../src/bower_components/')
 module.exports = {
   entry: {
     // zepto, lodash exposed by itself
-    common: ['zepto', 'lodash', 'handlebars', 'utils']
+    common: ['zepto', 'lodash', 'vue', 'handlebars', 'utils']
   },
   output: {
     path: config.build.assetsRoot,
@@ -21,6 +21,7 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
+      'vue': path.resolve(bowerRoot, 'vue/dist/vue'),
       'zepto': path.join(bowerRoot, 'zepto/zepto'),
       'lodash': path.join(bowerRoot, 'lodash/lodash'),
       'handlebars': path.join(bowerRoot, 'handlebars/handlebars'),
@@ -73,6 +74,10 @@ module.exports = {
       {
         test: path.join(bowerRoot, 'handlebars/handlebars'),
         loader: 'expose?Handlebars'
+      },
+      {
+        test: path.join(bowerRoot, 'vue/dist/vue'),
+        loader: 'expose?Vue'
       },
       {
         test: path.resolve(__dirname, '../src/utils/utils'),
