@@ -7,7 +7,7 @@ var bowerRoot = path.resolve(__dirname, '../src/bower_components/')
 module.exports = {
   entry: {
     // zepto, lodash exposed by itself
-    common: ['zepto', 'lodash', 'vue', 'handlebars', 'utils']
+    common: ['zepto', 'lodash', 'vue', 'utils']
   },
   output: {
     path: config.build.assetsRoot,
@@ -21,6 +21,7 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
+      'tmpl': path.resolve(__dirname, '../src/tmpl'),
       'vue': path.resolve(bowerRoot, 'vue/dist/vue'),
       'zepto': path.join(bowerRoot, 'zepto/zepto'),
       'lodash': path.join(bowerRoot, 'lodash/lodash'),
@@ -70,10 +71,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: path.join(bowerRoot, 'handlebars/handlebars'),
-        loader: 'expose?Handlebars'
       },
       {
         test: path.join(bowerRoot, 'vue/dist/vue'),

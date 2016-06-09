@@ -31,7 +31,7 @@ utils.entry.forEach(function(item) {
   conf.plugins.push(new HtmlWebpackPlugin({
     scope: item,
     filename: item + '.html',
-    template: 'src/tmpl/' + item + '.html',
+    template: 'src/modules/' + item +'/' + item + '.html',
     inject: 'body',
     chunks: [ item ]
   }))
